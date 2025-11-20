@@ -34,6 +34,8 @@ import {
 const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/admin" },
   { icon: Building2, label: "Clients", href: "/admin/clients" },
+  { icon: Users, label: "Users", href: "/admin/users" },
+  { icon: Shield, label: "Roles", href: "/admin/roles" },
   { icon: FolderKanban, label: "Projects", href: "/admin/projects" },
   { icon: Camera, label: "Cameras", href: "/admin/cameras" },
   { icon: ImageIcon, label: "Compare Images", href: "/admin/compare" },
@@ -45,8 +47,6 @@ const menuItems = [
   },
   { icon: FileText, label: "Reports", href: "/admin/reports" },
   { icon: Bell, label: "Alerts Settings", href: "/admin/alerts" },
-  { icon: Users, label: "Users", href: "/admin/users" },
-  { icon: Shield, label: "Roles", href: "/admin/roles" },
 ];
 
 export function Sidebar() {

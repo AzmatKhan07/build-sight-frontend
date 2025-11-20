@@ -74,6 +74,12 @@ export default function LoginPage() {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <Label htmlFor="password">Password</Label>
+              <Link
+                href="/forget-password"
+                className="text-sm text-primary hover:underline"
+              >
+                Forgot password?
+              </Link>
             </div>
             <div className="relative">
               <Lock className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
@@ -103,29 +109,20 @@ export default function LoginPage() {
           </div>
 
           {/* Remember Me */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Checkbox
-                id="remember"
-                checked={formData.rememberMe}
-                onCheckedChange={(checked) =>
-                  setFormData({ ...formData, rememberMe: checked })
-                }
-              />
-              <Label
-                htmlFor="remember"
-                className="text-sm font-normal cursor-pointer"
-              >
-                Remember me
-              </Label>
-            </div>
-
-            <Link
-              href="/forget-password"
-              className="text-sm text-primary hover:underline"
+          <div className="flex items-center space-x-2">
+            <Checkbox
+              id="remember"
+              checked={formData.rememberMe}
+              onCheckedChange={(checked) =>
+                setFormData({ ...formData, rememberMe: checked })
+              }
+            />
+            <Label
+              htmlFor="remember"
+              className="text-sm font-normal cursor-pointer"
             >
-              Forgot password?
-            </Link>
+              Remember me
+            </Label>
           </div>
 
           {/* Submit Button */}
